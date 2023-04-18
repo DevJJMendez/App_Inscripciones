@@ -3,9 +3,11 @@ C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Present
 C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\bin\Debug\Presentacion.pdb
 C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
 C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.csproj.SuggestedBindingRedirects.cache
-C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.Background.resources
 C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
 C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
 C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
 C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.frmRegistro.resources
+C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.frmInscripciones.resources
+C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.frmPrincipal.resources
