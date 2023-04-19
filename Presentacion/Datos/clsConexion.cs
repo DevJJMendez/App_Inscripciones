@@ -1,7 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data.SqlClient;
-
 namespace Datos
 {
     public class clsConexion
@@ -12,12 +11,11 @@ namespace Datos
         {
             objConexionSQL = new MySqlConnection();
             //************* CONEXION LOCAL ******************
-            String servidor = "10.230.163197";
+            String servidor = "10.230.16.156";
             String bd = "dbs_inscripciones_jjmendez";
             String usuario = "yoyito";
             String contraseña = "Sena2023";
             String puerto = "3306";
-
 
             strConexion = "server=" + servidor + ";port=" + puerto + ";user id=" + usuario + ";password=" + contraseña + ";database=" + bd + ";";
             try

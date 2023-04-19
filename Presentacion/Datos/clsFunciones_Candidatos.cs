@@ -1,10 +1,12 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Data;
 using System.Globalization;
 namespace Datos
 {
     public class clsFunciones_Candidatos
     {
+        private DataTable dt;
         public void fntGuardar(String Id, string pNombre, string sNombre, string pApellido, string sApellido, string Contacto, string Direccion, string Correo, string Edad, int Estudio, string Acudientes)
         {
 			try
@@ -25,5 +27,25 @@ namespace Datos
 				throw;
 			}
         }
+		public void fntCargarComboBox()
+		{
+            string sql = "select PKCodigo,Nombre from tbl_Categorias order by Nombre ASC";
+            clsConexion objConecta = new clsConexion();
+            objConecta.fntConectar();
+
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(sql, objConecta.objConexionSQL);
+                dt = new DataTable();
+                MySqlDataAdapter objData = new MySqlDataAdapter(comando);
+                objData.Fill(dt);
+                
+            }
+            catch (Exception)
+            {
+                objConecta.fntDesconectar();
+            }
+        }
+        public DataTable getDt() => dt;
     }
 }

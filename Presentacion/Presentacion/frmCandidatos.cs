@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion
@@ -17,9 +10,28 @@ namespace Presentacion
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void fntCargarComboBox()
         {
-
+            
+        }
+        private void fntClean()
+        {
+            tbxID.Clear();
+            tbxPnombre.Clear();
+            tbxSnombre.Clear();
+            tbxPapellido.Clear();
+            tbxSapellido.Clear();
+            tbxAcudientes.Clear();
+            tbxContacto.Clear();
+            tbxCorreo.Clear();
+            tbxDireccion.Clear();
+            tbxEdad.Clear();
+            cbxNestudio.SelectedIndex = 0;
+            
+        }
+        private void ptbNewUser_Click(object sender, EventArgs e)
+        {
+            fntClean();
         }
     }
 }
