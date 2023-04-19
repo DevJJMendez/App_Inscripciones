@@ -1,6 +1,8 @@
 ﻿using Negocio;
 using System;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 /*
@@ -38,7 +40,7 @@ using System.Windows.Forms;
             }
             catch {}
         }
- * */
+ */
 namespace Presentacion
 {
     public partial class frmCandidatos : Form
@@ -84,8 +86,13 @@ namespace Presentacion
 
         private void pbxGuardar_Click(object sender, EventArgs e)
         {
-            clsAgregarCandidatos objAgregarCandidato = new clsAgregarCandidatos(tbxID.Text, tbxPnombre.Text, tbxSnombre.Text, tbxPapellido.Text, tbxSapellido.Text, tbxContacto.Text, tbxDireccion.Text, tbxCorreo.Text, tbxEdad.Text, cbxNestudio.SelectedIndex+1, tbxAcudientes.Text);
+            MemoryStream ms = new MemoryStream();
+            ptbUser.Image.Save(ms, ImageFormat.Jpeg);
+            byte[] aByte = ms.ToArray();
+            ptbUser.Image = null;
+            clsAgregarCandidatos objAgregarCandidato = new clsAgregarCandidatos(tbxID.Text, tbxPnombre.Text, tbxSnombre.Text, tbxPapellido.Text, tbxSapellido.Text, tbxContacto.Text, tbxDireccion.Text, tbxCorreo.Text, tbxEdad.Text, cbxNestudio.SelectedIndex+1, tbxAcudientes.Text,aByte);
             MessageBox.Show($"{objAgregarCandidato.getMsn()}");
+            fntClean();
         }
 
         private void ptbUser_Click(object sender, EventArgs e)

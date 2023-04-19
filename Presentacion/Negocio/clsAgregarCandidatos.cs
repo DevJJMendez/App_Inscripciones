@@ -14,9 +14,10 @@ namespace Negocio
         private string str_Edad;
         private int int_Estudio;
         private string str_Acudientes;
+        private byte[] byte_imagen;
         private string str_msn;//enviar mensaje a la capa de presentación.
 
-        public clsAgregarCandidatos(string str_Id, string str_Pnombre, string str_Snombre, string str_Papellido, string str_Sapellido, string str_Contacto, string str_Direccion, string str_Correo, string str_Edad, int int_Estudio, string str_Acudientes)
+        public clsAgregarCandidatos(string str_Id, string str_Pnombre, string str_Snombre, string str_Papellido, string str_Sapellido, string str_Contacto, string str_Direccion, string str_Correo, string str_Edad, int int_Estudio, string str_Acudientes, byte[] aByte)
         {
             this.str_Id = str_Id;
             this.str_Pnombre = str_Pnombre;
@@ -29,6 +30,7 @@ namespace Negocio
             this.str_Edad = str_Edad;
             this.int_Estudio = int_Estudio;
             this.str_Acudientes = str_Acudientes;
+            this.byte_imagen = aByte;
             if (str_Id == "" || str_Pnombre == "" || str_Snombre == "" ||
                 str_Papellido == "" || str_Sapellido == "" || str_Contacto == "" || str_Direccion == "" || str_Correo == "" || str_Edad == "" || str_Acudientes == "")
             {
@@ -39,7 +41,7 @@ namespace Negocio
                 clsFunciones_Candidatos objGuardar = new clsFunciones_Candidatos();
                 objGuardar.fntGuardar(str_Id, str_Pnombre, str_Snombre, str_Papellido, str_Sapellido,
                     str_Contacto, str_Direccion, str_Correo,
-                    str_Edad, int_Estudio, str_Acudientes);
+                    str_Edad, int_Estudio, str_Acudientes,byte_imagen);
                 str_msn = $"El candidato {str_Pnombre} {str_Papellido} ha sido registrado";
             }
         }

@@ -270,7 +270,7 @@
             this.ptbUser.Location = new System.Drawing.Point(458, 6);
             this.ptbUser.Name = "ptbUser";
             this.ptbUser.Size = new System.Drawing.Size(128, 128);
-            this.ptbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbUser.TabIndex = 22;
             this.ptbUser.TabStop = false;
             this.toolTip1.SetToolTip(this.ptbUser, "Ingrese foto de perfil");
