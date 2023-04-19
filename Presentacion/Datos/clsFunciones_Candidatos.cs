@@ -13,7 +13,7 @@ namespace Datos
 			{
 				clsConexion objConexion = new clsConexion();
 				objConexion.fntConectar();
-				string strConsulta = "insert into tbl_personas(PKId,P_Nombre,S_Nombre,P_Apellido,S_Apellido,Contacto,Dirección,Correo,Edad,FKCodigo_tbl_nivelestudio,Acudiente)" + "values('"+Id+"','"+pNombre+"','"+sNombre+"','"+pApellido+"','"+sApellido+"','" + Contacto+"','"+Direccion+"','"+Correo+"','"+Edad+"','"+Estudio+"','"+Acudientes+"')";
+				string strConsulta = "insert into tbl_personas(PKId,P_Nombre,S_Nombre,P_Apellido,S_Apellido,Contacto,Dirección,Correo,Edad,FKCodigo_tbl_nivelestudio,Acudiente)values('"+Id+"','"+pNombre+"','"+sNombre+"','"+pApellido+"','"+sApellido+"','" + Contacto+"','"+Direccion+"','"+Correo+"','"+Edad+"','"+Estudio+"','"+Acudientes+"')";
 
 				MySqlCommand objComando = new MySqlCommand(strConsulta, objConexion.objConexionSQL);
 
@@ -21,15 +21,11 @@ namespace Datos
 
 				objConexion.fntDesconectar();
 			}
-			catch (Exception)
-			{
-
-				throw;
-			}
+			catch (Exception){}
         }
 		public void fntCargarComboBox()
 		{
-            string sql = "select PKCodigo,Nombre from tbl_Categorias order by Nombre ASC";
+            string sql = "select PKCodigo,Nombre from tbl_nivelestudio";
             clsConexion objConecta = new clsConexion();
             objConecta.fntConectar();
 
@@ -46,6 +42,8 @@ namespace Datos
                 objConecta.fntDesconectar();
             }
         }
-        public DataTable getDt() => dt;
+        public DataTable getDt()
+        { return this.dt; 
+        }
     }
 }

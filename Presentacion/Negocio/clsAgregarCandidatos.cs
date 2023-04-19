@@ -43,6 +43,9 @@ namespace Negocio
                 str_msn = $"El candidato {str_Pnombre} {str_Papellido} ha sido registrado";
             }
         }
-        public string getMsn() => str_msn;
+        public string getMsn()
+        {
+            return str_msn;
+        }
     }
 }

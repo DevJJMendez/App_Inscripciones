@@ -12,6 +12,9 @@ namespace Negocio
             objDT.fntCargarComboBox();
             this.dt = objDT.getDt();
         }
-        public DataTable getDt() => this.dt;
+        public DataTable getDt()
+        {
+            return this.dt; 
+        }
     }
 }

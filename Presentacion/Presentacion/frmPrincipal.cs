@@ -7,21 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//using Negocio;
 namespace Presentacion
 {
     public partial class frmPrincipal : Form
     {
+        
         public frmPrincipal()
         {
             InitializeComponent();
+            
         }
-
-        private void Principal_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Close();
