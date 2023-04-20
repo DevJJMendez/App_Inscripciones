@@ -122,6 +122,7 @@
             this.tbxID.Name = "tbxID";
             this.tbxID.Size = new System.Drawing.Size(237, 27);
             this.tbxID.TabIndex = 5;
+            this.tbxID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxID_KeyPress);
             // 
             // label6
             // 
@@ -231,6 +232,7 @@
             this.tbxContacto.Name = "tbxContacto";
             this.tbxContacto.Size = new System.Drawing.Size(237, 27);
             this.tbxContacto.TabIndex = 17;
+            this.tbxContacto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxContacto_KeyPress);
             // 
             // tbxDireccion
             // 
@@ -247,6 +249,7 @@
             this.tbxCorreo.Name = "tbxCorreo";
             this.tbxCorreo.Size = new System.Drawing.Size(237, 27);
             this.tbxCorreo.TabIndex = 19;
+            this.tbxCorreo.Validating += new System.ComponentModel.CancelEventHandler(this.tbxCorreo_Validating);
             // 
             // tbxEdad
             // 

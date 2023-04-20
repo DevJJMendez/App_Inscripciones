@@ -4,7 +4,9 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 /*
  * para establecer una imagen: 
  * se crea una variable tipo string
@@ -62,21 +64,25 @@ namespace Presentacion
             cbxNestudio.DisplayMember = "Nombre";
             cbxNestudio.DataSource = objdt.getDt();
         }
+        private void fntNumbersOnly()
+        {
+            
+        }
         private void fntClean()
         {
             tbxID.Clear();
-            tbxPnombre.Clear();
-            tbxSnombre.Clear();
-            tbxPapellido.Clear();
-            tbxSapellido.Clear();
-            tbxAcudientes.Clear();
-            tbxContacto.Clear();
-            tbxCorreo.Clear();
-            tbxDireccion.Clear();
-            tbxEdad.Clear();
-            ptbUser.Image = Image.FromFile(rutaDirectorio + "\\user.png");
-            //cbxNestudio.SelectedIndex = 0;
-            tbxID.Focus();
+                tbxPnombre.Clear();
+                    tbxSnombre.Clear();
+                        tbxPapellido.Clear();
+                            tbxSapellido.Clear();
+                                tbxAcudientes.Clear();
+                                    tbxContacto.Clear();
+                                        tbxCorreo.Clear();
+                                            tbxDireccion.Clear();
+                                                tbxEdad.Clear();
+                                                    ptbUser.Image = Image.FromFile(rutaDirectorio + "\\user.png");
+                                                        //cbxNestudio.SelectedIndex = 0;
+                                                            tbxID.Focus();
             
         }
         private void ptbNewUser_Click(object sender, EventArgs e)
@@ -90,11 +96,20 @@ namespace Presentacion
             ptbUser.Image.Save(ms, ImageFormat.Jpeg);
             byte[] aByte = ms.ToArray();
             ptbUser.Image = null;
-            clsAgregarCandidatos objAgregarCandidato = new clsAgregarCandidatos(tbxID.Text, tbxPnombre.Text, tbxSnombre.Text, tbxPapellido.Text, tbxSapellido.Text, tbxContacto.Text, tbxDireccion.Text, tbxCorreo.Text, tbxEdad.Text, cbxNestudio.SelectedIndex+1, tbxAcudientes.Text,aByte);
-            MessageBox.Show($"{objAgregarCandidato.getMsn()}");
-            fntClean();
+            clsAgregarCandidatos objAgregarCandidato = new clsAgregarCandidatos(tbxID.Text,
+                tbxPnombre.Text,
+                    tbxSnombre.Text,
+                        tbxPapellido.Text,
+                            tbxSapellido.Text,
+                                tbxContacto.Text,
+                                    tbxDireccion.Text,
+                                        tbxCorreo.Text,
+                                            tbxEdad.Text,
+                                                cbxNestudio.SelectedIndex+1,
+                                                    tbxAcudientes.Text,aByte);
+                                                            MessageBox.Show($"{objAgregarCandidato.getMsn()}");
+                                                                      fntClean();
         }
-
         private void ptbUser_Click(object sender, EventArgs e)
         {
             try
@@ -109,6 +124,73 @@ namespace Presentacion
                 }
             }
             catch {}
+        }
+
+        private void tbxCorreo_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            string errorMsg;
+            if (!IsValidEmail(tbxCorreo.Text, out errorMsg))
+            {
+                // Cancela la validación y establece el foco en el control TextBox
+                e.Cancel = true;
+                tbxCorreo.Select(0, tbxCorreo.Text.Length);
+
+                // Muestra un mensaje de error al usuario
+                MessageBox.Show(errorMsg);
+            }
+        }
+        public static bool IsValidEmail(string email, out string errorMsg)
+        {
+            // Verifica si el correo electrónico es válido usando una expresión regular
+            bool isValid = true;
+            errorMsg = "";
+
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                isValid = addr.Address == email;
+            }
+            catch
+            {
+                isValid = false;
+            }
+
+            if (!isValid)
+            {
+                errorMsg = "El correo electrónico ingresado no es válido";
+            }
+
+            return isValid;
+        }
+
+        private void tbxID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            void fntNumbersOnly()
+            {
+                if (Char.IsNumber(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+
+                else if (Char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            fntNumbersOnly();
+        }
+
+        private void tbxContacto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            fntNumbersOnly();
         }
     }
 }
