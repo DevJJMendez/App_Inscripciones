@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -64,10 +65,6 @@ namespace Presentacion
             cbxNestudio.DisplayMember = "Nombre";
             cbxNestudio.DataSource = objdt.getDt();
         }
-        private void fntNumbersOnly()
-        {
-            
-        }
         private void fntClean()
         {
             tbxID.Clear();
@@ -125,7 +122,6 @@ namespace Presentacion
             }
             catch {}
         }
-
         private void tbxCorreo_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             string errorMsg;
@@ -163,34 +159,25 @@ namespace Presentacion
             return isValid;
         }
 
-        private void tbxID_KeyPress(object sender, KeyPressEventArgs e)
+        private void fntConsultar(string Id)
         {
-            void fntNumbersOnly()
-            {
-                if (Char.IsNumber(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else if (Char.IsControl(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-
-                else if (Char.IsSeparator(e.KeyChar))
-                {
-                    e.Handled = true;
-                }
-                else
-                {
-                    e.Handled = true;
-                }
-            }
-            fntNumbersOnly();
+            clsConsultarCandidato objConsultar = new clsConsultarCandidato();
+            objConsultar.fntConsultar(Id);
+            ptbUser.Image = objConsultar.getBmp();
+            tbxPnombre.Text = objConsultar.getPNombre();
+            tbxSnombre.Text = objConsultar.getSNombre();
+            tbxPapellido.Text = objConsultar.getPApellido();
+            tbxSapellido.Text = objConsultar.getSApellido();
+            tbxContacto.Text = objConsultar.getContacto();
+            tbxDireccion.Text = objConsultar.getDireccion();
+            tbxCorreo.Text = objConsultar.getCorreo();
+            tbxEdad.Text = objConsultar.getEdad();
+            cbxNestudio.Text = Convert.ToString(objConsultar.getEstudio());
+            tbxAcudientes.Text = objConsultar.getAcudientes();
         }
-
-        private void tbxContacto_KeyPress(object sender, KeyPressEventArgs e)
+        private void ptbConsultar_Click(object sender, EventArgs e)
         {
-            fntNumbersOnly();
+            fntConsultar(tbxID.Text);
         }
     }
 }
