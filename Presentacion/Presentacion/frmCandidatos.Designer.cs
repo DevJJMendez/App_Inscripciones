@@ -53,14 +53,14 @@
             this.tbxEdad = new System.Windows.Forms.TextBox();
             this.tbxAcudientes = new System.Windows.Forms.TextBox();
             this.ptbUser = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ptbHome = new System.Windows.Forms.PictureBox();
             this.ptbConsultar = new System.Windows.Forms.PictureBox();
             this.pbxGuardar = new System.Windows.Forms.PictureBox();
             this.ptbNewUser = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbConsultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbNewUser)).BeginInit();
@@ -290,18 +290,19 @@
             this.toolTip1.SetToolTip(this.ptbUser, "Ingrese foto de perfil");
             this.ptbUser.Click += new System.EventHandler(this.ptbUser_Click);
             // 
-            // pictureBox2
+            // ptbHome
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(174, 396);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox2, "Volver Al Menu Principal");
+            this.ptbHome.BackColor = System.Drawing.Color.Transparent;
+            this.ptbHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbHome.BackgroundImage")));
+            this.ptbHome.Image = ((System.Drawing.Image)(resources.GetObject("ptbHome.Image")));
+            this.ptbHome.Location = new System.Drawing.Point(174, 396);
+            this.ptbHome.Name = "ptbHome";
+            this.ptbHome.Size = new System.Drawing.Size(128, 128);
+            this.ptbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbHome.TabIndex = 23;
+            this.ptbHome.TabStop = false;
+            this.toolTip1.SetToolTip(this.ptbHome, "Volver Al Menu Principal");
+            this.ptbHome.Click += new System.EventHandler(this.ptbHome_Click);
             // 
             // ptbConsultar
             // 
@@ -364,7 +365,7 @@
             this.Controls.Add(this.ptbNewUser);
             this.Controls.Add(this.pbxGuardar);
             this.Controls.Add(this.ptbConsultar);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.ptbHome);
             this.Controls.Add(this.ptbUser);
             this.Controls.Add(this.tbxAcudientes);
             this.Controls.Add(this.tbxEdad);
@@ -392,7 +393,7 @@
             this.Name = "frmCandidatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.ptbUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbConsultar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGuardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbNewUser)).EndInit();
@@ -427,7 +428,7 @@
         private System.Windows.Forms.TextBox tbxEdad;
         private System.Windows.Forms.TextBox tbxAcudientes;
         private System.Windows.Forms.PictureBox ptbUser;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox ptbHome;
         private System.Windows.Forms.PictureBox ptbConsultar;
         private System.Windows.Forms.PictureBox pbxGuardar;
         private System.Windows.Forms.PictureBox ptbNewUser;

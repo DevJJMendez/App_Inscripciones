@@ -8,42 +8,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-/*
- * para establecer una imagen: 
- * se crea una variable tipo string
- * string rutaDirectorio;
- * 
- * luego se establece una ruta:
- * rutaDirectorio = Path.Combine(Application.StartupPath + "\\Imagenes");
- * 
- * se guarda la imagen en la carpeta imagenes
- * 
- * luego:
- * ptbUser.Image = Image.FromFile(rutaDirectorio + "\\user.png");
- * en la función limpiar
- * 
- * y luego se llama la funcion limpiar en el form
- * fntClean();
- * 
- * 
- * para insertar fotos :
- * 
- * private void ptbUser_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                rutaDirectorio = Path.Combine(Application.StartupPath + "\\Imagenes");
-                OpenFileDialog file = new OpenFileDialog();
-                file.Filter = "Archivo JPG|*.jpg";
 
-                if (file.ShowDialog() == DialogResult.OK)
-                {
-                    ptbUser.Image = Image.FromFile(file.FileName);
-                }
-            }
-            catch {}
-        }
- */
 namespace Presentacion
 {
     public partial class frmCandidatos : Form
@@ -178,6 +143,12 @@ namespace Presentacion
         private void ptbConsultar_Click(object sender, EventArgs e)
         {
             fntConsultar(tbxID.Text);
+        }
+
+        private void ptbHome_Click(object sender, EventArgs e)
+        {
+            frmPrincipal objPrincipal = new frmPrincipal();
+            objPrincipal.Show();
         }
     }
 }

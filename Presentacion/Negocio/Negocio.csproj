@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="clsAgregarCandidatos.cs" />
     <Compile Include="clsConsultarCandidato.cs" />
+    <Compile Include="clsIncripciones.cs" />
     <Compile Include="clsNivelEstudio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

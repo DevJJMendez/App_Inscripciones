@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -21,21 +22,26 @@ namespace Datos
         private string strEdad;
         private int intEstudio;
         private string strAcudientes;
-        public void fntGuardar(String Id, string pNombre, string sNombre, string pApellido, string sApellido, string Contacto, string Direccion, string Correo, string Edad, int Estudio, string Acudientes, byte[] imagen)
+        public void fntGuardar(String Id, string pNombre, string sNombre, string pApellido, string sApellido, string Contacto, string Direccion, string Correo, string Edad, int Estudio, string Acudientes, byte[] Imagen)
         {
-			try
-			{
-				clsConexion objConexion = new clsConexion();
-				objConexion.fntConectar();
-				string strConsulta = "insert into tbl_personas(PKId,P_Nombre,S_Nombre,P_Apellido,S_Apellido,Contacto,Dirección,Correo,Edad,FKCodigo_tbl_nivelestudio,Acudiente,Imagen)values('"+Id+"','"+pNombre+"','"+sNombre+"','"+pApellido+"','"+sApellido+"','" + Contacto+"','"+Direccion+"','"+Correo+"','"+Edad+"','"+Estudio+"','"+Acudientes+"','"+imagen+"')";
-
-				MySqlCommand objComando = new MySqlCommand(strConsulta, objConexion.objConexionSQL);
-
-				MySqlDataReader objLectura = objComando.ExecuteReader();
-
-				objConexion.fntDesconectar();
-			}
-			catch (Exception){}
+            clsConexion objConexion = new clsConexion();
+            objConexion.fntConectar();
+            string comando = "insert into tbl_personas values (@PKId,@P_Nombre,@S_Nombre,@P_Apellido,@S_Apellido,@Contacto,@Dirección,@Correo,@edad,@FKCodigo_tbl_nivelestudio,@Acudiente,@Imagen)";
+            MySqlCommand cmd = new MySqlCommand(comando, objConexion.objConexionSQL);
+            cmd.Parameters.AddWithValue("@PKId", Id);
+            cmd.Parameters.AddWithValue("@P_Nombre", pNombre);
+            cmd.Parameters.AddWithValue("@S_Nombre", sNombre);
+            cmd.Parameters.AddWithValue("@P_Apellido", pApellido);
+            cmd.Parameters.AddWithValue("@S_Apellido", sApellido);
+            cmd.Parameters.AddWithValue("@Contacto", Contacto);
+            cmd.Parameters.AddWithValue("@Dirección", Direccion);
+            cmd.Parameters.AddWithValue("@Correo", Correo);
+            cmd.Parameters.AddWithValue("@Edad", Edad);
+            cmd.Parameters.AddWithValue("@FKCodigo_tbl_nivelestudio", Estudio);
+            cmd.Parameters.AddWithValue("@Acudiente", Acudientes);
+            cmd.Parameters.AddWithValue("@Imagen", Imagen);
+            cmd.ExecuteNonQuery();
+            objConexion.fntDesconectar();
         }
 		public void fntCargarComboBox()
 		{

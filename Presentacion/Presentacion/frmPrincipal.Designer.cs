@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ptbCandidatos = new System.Windows.Forms.PictureBox();
+            this.ptbInscripciones = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pbxSalir = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCandidatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbInscripciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSalir)).BeginInit();
             this.SuspendLayout();
@@ -51,25 +51,27 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Modulo Principal";
             // 
-            // pictureBox1
+            // ptbCandidatos
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 73);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.ptbCandidatos.Image = ((System.Drawing.Image)(resources.GetObject("ptbCandidatos.Image")));
+            this.ptbCandidatos.Location = new System.Drawing.Point(12, 73);
+            this.ptbCandidatos.Name = "ptbCandidatos";
+            this.ptbCandidatos.Size = new System.Drawing.Size(128, 128);
+            this.ptbCandidatos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbCandidatos.TabIndex = 1;
+            this.ptbCandidatos.TabStop = false;
+            this.ptbCandidatos.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox2
+            // ptbInscripciones
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(165, 73);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.ptbInscripciones.Image = ((System.Drawing.Image)(resources.GetObject("ptbInscripciones.Image")));
+            this.ptbInscripciones.Location = new System.Drawing.Point(165, 73);
+            this.ptbInscripciones.Name = "ptbInscripciones";
+            this.ptbInscripciones.Size = new System.Drawing.Size(128, 128);
+            this.ptbInscripciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbInscripciones.TabIndex = 2;
+            this.ptbInscripciones.TabStop = false;
+            this.ptbInscripciones.Click += new System.EventHandler(this.ptbInscripciones_Click);
             // 
             // pictureBox3
             // 
@@ -90,7 +92,7 @@
             this.pbxSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbxSalir.TabIndex = 4;
             this.pbxSalir.TabStop = false;
-            this.pbxSalir.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pbxSalir.Click += new System.EventHandler(this.pbxSalir_Click);
             // 
             // label2
             // 
@@ -110,14 +112,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pbxSalir);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ptbInscripciones);
+            this.Controls.Add(this.ptbCandidatos);
             this.Controls.Add(this.label1);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCandidatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbInscripciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSalir)).EndInit();
             this.ResumeLayout(false);
@@ -128,8 +130,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox ptbCandidatos;
+        private System.Windows.Forms.PictureBox ptbInscripciones;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pbxSalir;
         private System.Windows.Forms.Label label2;

@@ -18,7 +18,19 @@ namespace Presentacion
             InitializeComponent();
             
         }
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmCandidatos objCandidatos = new frmCandidatos();
+            objCandidatos.Show();
+        }
+
+        private void ptbInscripciones_Click(object sender, EventArgs e)
+        {
+            frmInscripciones objInscripciones = new frmInscripciones();
+            objInscripciones.ShowDialog();
+        }
+
+        private void pbxSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
