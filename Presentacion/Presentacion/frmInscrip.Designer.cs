@@ -45,6 +45,7 @@
             this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.btnW = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,6 +127,7 @@
             this.tbxID.Name = "tbxID";
             this.tbxID.Size = new System.Drawing.Size(121, 20);
             this.tbxID.TabIndex = 8;
+            this.tbxID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxID_KeyPress);
             // 
             // tbxNombres
             // 
@@ -168,6 +170,7 @@
             this.pbxImagen.Location = new System.Drawing.Point(297, 31);
             this.pbxImagen.Name = "pbxImagen";
             this.pbxImagen.Size = new System.Drawing.Size(121, 141);
+            this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImagen.TabIndex = 14;
             this.pbxImagen.TabStop = false;
             // 
@@ -189,11 +192,21 @@
             this.btnX.Text = "X";
             this.btnX.UseVisualStyleBackColor = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(217, 34);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "<ENTER>";
+            // 
             // frmInscrip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnX);
             this.Controls.Add(this.btnW);
             this.Controls.Add(this.pbxImagen);
@@ -238,5 +251,6 @@
         private System.Windows.Forms.PictureBox pbxImagen;
         private System.Windows.Forms.Button btnW;
         private System.Windows.Forms.Button btnX;
+        private System.Windows.Forms.Label label9;
     }
 }
