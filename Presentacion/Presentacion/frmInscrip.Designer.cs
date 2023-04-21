@@ -41,7 +41,7 @@
             this.tbxCorreo = new System.Windows.Forms.TextBox();
             this.tbxDireccion = new System.Windows.Forms.TextBox();
             this.tbxContacto = new System.Windows.Forms.TextBox();
-            this.cbxProgramaFormacion = new System.Windows.Forms.ComboBox();
+            this.cbxProgramas = new System.Windows.Forms.ComboBox();
             this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.btnW = new System.Windows.Forms.Button();
             this.btnX = new System.Windows.Forms.Button();
@@ -157,13 +157,13 @@
             this.tbxContacto.Size = new System.Drawing.Size(121, 20);
             this.tbxContacto.TabIndex = 12;
             // 
-            // cbxProgramaFormacion
+            // cbxProgramas
             // 
-            this.cbxProgramaFormacion.FormattingEnabled = true;
-            this.cbxProgramaFormacion.Location = new System.Drawing.Point(38, 246);
-            this.cbxProgramaFormacion.Name = "cbxProgramaFormacion";
-            this.cbxProgramaFormacion.Size = new System.Drawing.Size(240, 21);
-            this.cbxProgramaFormacion.TabIndex = 13;
+            this.cbxProgramas.FormattingEnabled = true;
+            this.cbxProgramas.Location = new System.Drawing.Point(38, 246);
+            this.cbxProgramas.Name = "cbxProgramas";
+            this.cbxProgramas.Size = new System.Drawing.Size(240, 21);
+            this.cbxProgramas.TabIndex = 13;
             // 
             // pbxImagen
             // 
@@ -210,7 +210,7 @@
             this.Controls.Add(this.btnX);
             this.Controls.Add(this.btnW);
             this.Controls.Add(this.pbxImagen);
-            this.Controls.Add(this.cbxProgramaFormacion);
+            this.Controls.Add(this.cbxProgramas);
             this.Controls.Add(this.tbxContacto);
             this.Controls.Add(this.tbxDireccion);
             this.Controls.Add(this.tbxCorreo);
@@ -247,7 +247,7 @@
         private System.Windows.Forms.TextBox tbxCorreo;
         private System.Windows.Forms.TextBox tbxDireccion;
         private System.Windows.Forms.TextBox tbxContacto;
-        private System.Windows.Forms.ComboBox cbxProgramaFormacion;
+        private System.Windows.Forms.ComboBox cbxProgramas;
         private System.Windows.Forms.PictureBox pbxImagen;
         private System.Windows.Forms.Button btnW;
         private System.Windows.Forms.Button btnX;

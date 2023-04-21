@@ -17,8 +17,18 @@ namespace Presentacion
         public frmInscrip()
         {
             InitializeComponent();
+            fntCargarProgramas();
+            
         }
-
+//------Función para cargar los comboBox----------------------------------
+        private void fntCargarProgramas()
+        {
+            clsProgramas objdtProgramas = new clsProgramas();
+            objdtProgramas.fntCargarProgramas();
+            cbxProgramas.ValueMember = "PKCodigo";
+            cbxProgramas.DisplayMember = "Nombre";
+            cbxProgramas.DataSource = objdtProgramas.getdtProgramas();
+        }
 //------Función consultar, Capa negocio-------------------------------------------------------------------------------------------------------------------------------------------
         private void fntConsultaI(string Id)
         {

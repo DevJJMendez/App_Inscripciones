@@ -17,11 +17,16 @@ namespace Presentacion
         public frmCandidatos()
         {
             InitializeComponent();
+//---------Se inicia la función para que cargue los comboBox al iniciar-----------------------------------------------------------------------------------------------------------
             fntCargarComboBox();
+//----------Abrir ruta para ingresar foto-----------------------------------------------------------------------------------------------------------------------------------------
             rutaDirectorio = Path.Combine(Application.StartupPath + "\\Imagenes");
             fntClean();
         }
 
+/*------Creación de la función para cargar los comboBox---------------------------------------------------------------------------------------------------------------------------
+ -------Instacia de la clase y creación del objeto para obtener la función--------------------------------------------------------------------------------------------------------
+*/
         private void fntCargarComboBox()
         {
             clsNivelEstudio objdt = new clsNivelEstudio();
@@ -30,6 +35,9 @@ namespace Presentacion
             cbxNestudio.DisplayMember = "Nombre";
             cbxNestudio.DataSource = objdt.getDt();
         }
+/*------Creación de la función para cargar los comboBox---------------------------------------------------------------------------------------------------------------------------
+ -------Instacia de la clase y creación del objeto para obtener la función--------------------------------------------------------------------------------------------------------
+*/
         private void fntClean()
         {
             tbxID.Clear();

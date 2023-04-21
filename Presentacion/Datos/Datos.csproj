@@ -83,6 +83,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsCargarProgramas.cs" />
     <Compile Include="clsConexion.cs" />
     <Compile Include="clsFunciones_Candidatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
+//--Clase Consultar Candidatos----------------------------------------------------------------------------------------------------------------------------------------------------
     public class clsConsultarCandidato
     {
         private Bitmap bmp;
@@ -21,6 +22,9 @@ namespace Negocio
         private string strEdad;
         private int intEstudio;
         private string strAcudientes;
+/*------Función Consultar, instancaio de la clase FuncionesCandidatos de la capa Datos--------------------------------------------------------------------------------------------
+creación del objeto objConsultarC para obtener los Getters------------------------------------------------------------------------------------------------------------------------
+*/
         public void fntConsultar(string Id)
         {
             clsFunciones_Candidatos objConsultarC = new clsFunciones_Candidatos();
@@ -42,6 +46,7 @@ namespace Negocio
         {
             return bmp;
         }
+//-------Metodos, Getters - Returns-----------------------------------------------------------------------------------------------------------------------------------------------
         public string getPNombre() => this.strPNombre;
         public string getSNombre() => this.strSNombre;
         public string getPApellido() => this.strPApellido;
