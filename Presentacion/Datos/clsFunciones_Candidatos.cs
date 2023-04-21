@@ -11,6 +11,7 @@ namespace Datos
 {
     public class clsFunciones_Candidatos
     {
+//------Atributos-----------------------------------------------------------------------------------------------------------------------------------------------------------------
         private DataTable dt;
         private Bitmap bmp;
         private string strPNombre;
@@ -23,6 +24,7 @@ namespace Datos
         private string strEdad;
         private int intEstudio;
         private string strAcudientes;
+//------Funcion guardar en la base de datos---------------------------------------------------------------------------------------------------------------------------------------
         public void fntGuardar(String Id, string pNombre, string sNombre, string pApellido, string sApellido, string Contacto, string Direccion, string Correo, string Edad, int Estudio, string Acudientes, byte[] Imagen)
         {
             clsConexion objConexion = new clsConexion();
@@ -51,6 +53,7 @@ namespace Datos
                 objConexion.fntDesconectar();
             }
         }
+//------Cargar comboBox desde la base de datos------------------------------------------------------------------------------------------------------------------------------------
 		public void fntCargarComboBox()
 		{
             string sql = "select PKCodigo,Nombre from tbl_nivelestudio";
@@ -74,6 +77,7 @@ namespace Datos
         {
             return this.dt;
         }
+//------Funcion consultar desde la base de datos----------------------------------------------------------------------------------------------------------------------------------
         public void fntConsultar(string Id)
         {
             String sql = "select P_Nombre,S_Nombre,P_Apellido,S_Apellido,Contacto,Dirección,Correo,Edad,FKCodigo_tbl_nivelestudio,Acudiente,Imagen from tbl_personas where PKId = '" + Id + "'";
@@ -100,6 +104,7 @@ namespace Datos
             }
                 objConsulta.fntDesconectar();
         }
+//------Returns-Getters and Setters-----------------------------------------------------------------------------------------------------------------------------------------------
         public Bitmap getBmp() => bmp;
         public string getPNombre() => this.strPNombre;
         public string getSNombre() => this.strSNombre;

@@ -3,6 +3,7 @@ namespace Negocio
 {
     public class clsAgregarCandidatos
     {
+//------Atributos----------------------------------------------------------------------------------------------------------------------------------------------------------------
         private string str_Id;
         private string str_Pnombre;
         private string str_Snombre;
@@ -17,6 +18,7 @@ namespace Negocio
         private byte[] byte_imagen;
         private string str_msn;//enviar mensaje a la capa de presentación.
 
+//------Constructor---------------------------------------------------------------------------------------------------------------------------------------------------------------
         public clsAgregarCandidatos(string str_Id, string str_Pnombre, string str_Snombre, string str_Papellido, string str_Sapellido, string str_Contacto, string str_Direccion, string str_Correo, string str_Edad, int int_Estudio, string str_Acudientes, byte[] aByte)
         {
             this.str_Id = str_Id;
@@ -31,11 +33,13 @@ namespace Negocio
             this.int_Estudio = int_Estudio;
             this.str_Acudientes = str_Acudientes;
             this.byte_imagen = aByte;
+//----------Validación de los campos----------------------------------------------------------------------------------------------------------------------------------------------
             if (string.IsNullOrEmpty(str_Id) || string.IsNullOrEmpty(str_Pnombre) ||
                  string.IsNullOrEmpty(str_Papellido) || string.IsNullOrEmpty(str_Contacto) || string.IsNullOrEmpty(str_Direccion)|| string.IsNullOrEmpty(str_Correo)|| string.IsNullOrEmpty(str_Edad))
             {
                 str_msn = "Debe ingresar toda la información requerida";
             }
+//----------Creación del objeto de la clase que esta en la capa datos-------------------------------------------------------------------------------------------------------------
             else
             {
                 clsFunciones_Candidatos objGuardar = new clsFunciones_Candidatos();

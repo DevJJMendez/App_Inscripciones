@@ -58,6 +58,7 @@ namespace Presentacion
             ptbUser.Image.Save(ms, ImageFormat.Jpeg);
             byte[] aByte = ms.ToArray();
             ptbUser.Image = null;
+//----------Creación del objeto para obtener el metodo getMsn---------------------------------------------------------------------------------------------------------------------
             clsAgregarCandidatos objAgregarCandidato = new clsAgregarCandidatos(tbxID.Text,
                 tbxPnombre.Text,
                     tbxSnombre.Text,

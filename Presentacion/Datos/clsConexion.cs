@@ -5,6 +5,7 @@ namespace Datos
 {
     public class clsConexion
     {
+//------Establecer conexión con la base de datos----------------------------------------------------------------------------------------------------------------------------------
         public MySqlConnection objConexionSQL;
         string strConexion;
         public void fntConectar()
