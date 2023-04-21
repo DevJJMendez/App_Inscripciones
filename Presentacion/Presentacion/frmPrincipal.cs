@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using Negocio;
+using Negocio;
 namespace Presentacion
 {
     public partial class frmPrincipal : Form

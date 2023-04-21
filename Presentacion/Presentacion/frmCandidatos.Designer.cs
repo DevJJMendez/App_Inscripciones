@@ -126,6 +126,7 @@
             this.tbxID.Size = new System.Drawing.Size(392, 27);
             this.tbxID.TabIndex = 1;
             this.toolTip1.SetToolTip(this.tbxID, "Ingrese su documento, ejemplo: \"1002235233\"");
+            
             // 
             // label6
             // 

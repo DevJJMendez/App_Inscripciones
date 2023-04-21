@@ -31,8 +31,8 @@ namespace Negocio
             this.int_Estudio = int_Estudio;
             this.str_Acudientes = str_Acudientes;
             this.byte_imagen = aByte;
-            if (str_Id == "" || str_Pnombre == "" || str_Snombre == "" ||
-                str_Papellido == "" || str_Sapellido == "" || str_Contacto == "" || str_Direccion == "" || str_Correo == "" || str_Edad == "" || str_Acudientes == "")
+            if (string.IsNullOrEmpty(str_Id) || string.IsNullOrEmpty(str_Pnombre) ||
+                 string.IsNullOrEmpty(str_Papellido) || string.IsNullOrEmpty(str_Contacto) || string.IsNullOrEmpty(str_Direccion)|| string.IsNullOrEmpty(str_Correo)|| string.IsNullOrEmpty(str_Edad))
             {
                 str_msn = "Debe ingresar toda la información requerida";
             }

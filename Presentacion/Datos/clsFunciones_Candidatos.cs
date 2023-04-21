@@ -5,6 +5,7 @@ using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Datos
 {
@@ -40,8 +41,17 @@ namespace Datos
             cmd.Parameters.AddWithValue("@FKCodigo_tbl_nivelestudio", Estudio);
             cmd.Parameters.AddWithValue("@Acudiente", Acudientes);
             cmd.Parameters.AddWithValue("@Imagen", Imagen);
-            cmd.ExecuteNonQuery();
-            objConexion.fntDesconectar();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                MessageBox.Show("Este usuario ya se encuentra registrado");
+                objConexion.fntDesconectar();
+            }
+           
+            
         }
 		public void fntCargarComboBox()
 		{

@@ -35,16 +35,19 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pbxSalir = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCandidatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInscripciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSalir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("OCR A Extended", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.Location = new System.Drawing.Point(215, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(185, 20);
@@ -53,6 +56,8 @@
             // 
             // ptbCandidatos
             // 
+            this.ptbCandidatos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbCandidatos.BackgroundImage")));
+            this.ptbCandidatos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ptbCandidatos.Image = ((System.Drawing.Image)(resources.GetObject("ptbCandidatos.Image")));
             this.ptbCandidatos.Location = new System.Drawing.Point(12, 73);
             this.ptbCandidatos.Name = "ptbCandidatos";
@@ -64,6 +69,8 @@
             // 
             // ptbInscripciones
             // 
+            this.ptbInscripciones.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbInscripciones.BackgroundImage")));
+            this.ptbInscripciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ptbInscripciones.Image = ((System.Drawing.Image)(resources.GetObject("ptbInscripciones.Image")));
             this.ptbInscripciones.Location = new System.Drawing.Point(165, 73);
             this.ptbInscripciones.Name = "ptbInscripciones";
@@ -75,6 +82,8 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(317, 73);
             this.pictureBox3.Name = "pictureBox3";
@@ -85,6 +94,8 @@
             // 
             // pbxSalir
             // 
+            this.pbxSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxSalir.BackgroundImage")));
+            this.pbxSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbxSalir.Image = ((System.Drawing.Image)(resources.GetObject("pbxSalir.Image")));
             this.pbxSalir.Location = new System.Drawing.Point(467, 73);
             this.pbxSalir.Name = "pbxSalir";
@@ -98,11 +109,22 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("OCR A Extended", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
             this.label2.Location = new System.Drawing.Point(171, 223);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(251, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "SENA - Colombia - 2023";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1920, 1080);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // frmPrincipal
             // 
@@ -115,6 +137,7 @@
             this.Controls.Add(this.ptbInscripciones);
             this.Controls.Add(this.ptbCandidatos);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
@@ -122,6 +145,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbInscripciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSalir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +159,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pbxSalir;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
