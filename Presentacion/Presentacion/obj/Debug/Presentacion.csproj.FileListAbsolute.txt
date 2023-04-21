@@ -8,7 +8,6 @@ C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Present
 C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
 C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.pdb
-C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.frmInscripciones.resources
 C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.frmPrincipal.resources
 C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\bin\Debug\Negocio.dll
 C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\bin\Debug\Datos.dll
@@ -88,3 +87,4 @@ C:\Users\WIN 10 pro\Documents\GitHub\App_Inscripciones\Presentacion\Presentacion
 C:\Users\WIN 10 pro\Documents\GitHub\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\WIN 10 pro\Documents\GitHub\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\WIN 10 pro\Documents\GitHub\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\SENA\Documents\JJMendez - ADSO07\App_Inscripciones\Presentacion\Presentacion\obj\Debug\Presentacion.frmInscrip.resources

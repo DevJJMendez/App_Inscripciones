@@ -50,8 +50,6 @@ namespace Datos
                 MessageBox.Show("Este usuario ya se encuentra registrado");
                 objConexion.fntDesconectar();
             }
-           
-            
         }
 		public void fntCargarComboBox()
 		{

@@ -23,16 +23,15 @@ namespace Presentacion
             frmCandidatos objCandidatos = new frmCandidatos();
             objCandidatos.Show();
         }
-
-        private void ptbInscripciones_Click(object sender, EventArgs e)
-        {
-            frmInscripciones objInscripciones = new frmInscripciones();
-            objInscripciones.ShowDialog();
-        }
-
         private void pbxSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ptbInscripciones_Click(object sender, EventArgs e)
+        {
+            frmInscrip objInscripciones = new frmInscrip();
+            objInscripciones.ShowDialog();
         }
     }
 }

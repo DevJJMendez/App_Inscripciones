@@ -52,11 +52,11 @@
     <Compile Include="frmCandidatos.Designer.cs">
       <DependentUpon>frmCandidatos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInscripciones.cs">
+    <Compile Include="frmInscrip.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInscripciones.Designer.cs">
-      <DependentUpon>frmInscripciones.cs</DependentUpon>
+    <Compile Include="frmInscrip.Designer.cs">
+      <DependentUpon>frmInscrip.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -69,8 +69,8 @@
     <EmbeddedResource Include="frmCandidatos.resx">
       <DependentUpon>frmCandidatos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInscripciones.resx">
-      <DependentUpon>frmInscripciones.cs</DependentUpon>
+    <EmbeddedResource Include="frmInscrip.resx">
+      <DependentUpon>frmInscrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

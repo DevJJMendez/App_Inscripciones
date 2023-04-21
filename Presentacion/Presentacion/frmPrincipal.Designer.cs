@@ -56,6 +56,7 @@
             // 
             // ptbCandidatos
             // 
+            this.ptbCandidatos.BackColor = System.Drawing.Color.Transparent;
             this.ptbCandidatos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbCandidatos.BackgroundImage")));
             this.ptbCandidatos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ptbCandidatos.Image = ((System.Drawing.Image)(resources.GetObject("ptbCandidatos.Image")));
@@ -69,6 +70,7 @@
             // 
             // ptbInscripciones
             // 
+            this.ptbInscripciones.BackColor = System.Drawing.Color.Transparent;
             this.ptbInscripciones.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ptbInscripciones.BackgroundImage")));
             this.ptbInscripciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ptbInscripciones.Image = ((System.Drawing.Image)(resources.GetObject("ptbInscripciones.Image")));
@@ -82,6 +84,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
@@ -94,6 +97,7 @@
             // 
             // pbxSalir
             // 
+            this.pbxSalir.BackColor = System.Drawing.Color.Transparent;
             this.pbxSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxSalir.BackgroundImage")));
             this.pbxSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbxSalir.Image = ((System.Drawing.Image)(resources.GetObject("pbxSalir.Image")));
