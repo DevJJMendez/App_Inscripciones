@@ -60,6 +60,7 @@ namespace Presentacion
             fntClean();
         }
 
+ //-----Función guardar-----------------------------------------------------------------------------------------------------------------------------------------------------------
         private void pbxGuardar_Click(object sender, EventArgs e)
         {
             MemoryStream ms = new MemoryStream();
@@ -158,6 +159,12 @@ namespace Presentacion
         {
             frmPrincipal objPrincipal = new frmPrincipal();
             objPrincipal.Show();
+        }
+        private void ptbUpdate_Click(object sender, EventArgs e)
+        {
+            clsUpdateCandidatos objUpdateC = new clsUpdateCandidatos(tbxID.Text,tbxPnombre.Text,tbxSnombre.Text,tbxPapellido.Text,tbxSapellido.Text,tbxContacto.Text,tbxDireccion.Text,tbxCorreo.Text,tbxEdad.Text,cbxNestudio.SelectedIndex + 1, tbxAcudientes.Text);
+            MessageBox.Show($"{objUpdateC.GetMsj()}");
+            fntClean();
         }
     }
 }

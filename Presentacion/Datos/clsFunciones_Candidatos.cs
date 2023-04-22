@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Datos
 {
@@ -103,6 +104,35 @@ namespace Datos
                     strAcudientes = reader["Acudiente"].ToString();
             }
                 objConsulta.fntDesconectar();
+        }
+//------Función Actualizar candidatos---------------------------------------------------------------------------------------------------------------------------------------------
+        public void fntUpdate(String Id, string pNombre, string sNombre, string pApellido, string sApellido, string Contacto, string Direccion, string Correo, string Edad, int Estudio, string Acudientes)
+        {
+            clsConexion objConexion = new clsConexion();
+            objConexion.fntConectar();
+            string comando = "update tbl_personas set P_Nombre=@P_Nombre, S_Nombre=@s_Nombre, P_Apellido=@P_Apellido, S_Apellido=@S_Apellido, Contacto=@Contacto, Dirección=@Dirección, Correo=@Correo, Edad=@Edad, FKCodigo_tbl_nivelestudio=@FKCodigo_tbl_nivelestudio, Acudiente=@Acudiente where PKId=@PKId";
+            MySqlCommand cmd = new MySqlCommand(comando, objConexion.objConexionSQL);
+            cmd.Parameters.AddWithValue("@PKId", Id);
+            cmd.Parameters.AddWithValue("@P_Nombre", pNombre);
+            cmd.Parameters.AddWithValue("@S_Nombre", sNombre);
+            cmd.Parameters.AddWithValue("@P_Apellido", pApellido);
+            cmd.Parameters.AddWithValue("@S_Apellido", sApellido);
+            cmd.Parameters.AddWithValue("@Contacto", Contacto);
+            cmd.Parameters.AddWithValue("@Dirección", Direccion);
+            cmd.Parameters.AddWithValue("@Correo", Correo);
+            cmd.Parameters.AddWithValue("@Edad", Edad);
+            cmd.Parameters.AddWithValue("@FKCodigo_tbl_nivelestudio", Estudio);
+            cmd.Parameters.AddWithValue("@Acudiente", Acudientes);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                //MessageBox.Show("Este usuario ya se encuentra registrado");
+                objConexion.fntDesconectar();
+            }
         }
 //------Returns-Getters and Setters-----------------------------------------------------------------------------------------------------------------------------------------------
         public Bitmap getBmp() => bmp;

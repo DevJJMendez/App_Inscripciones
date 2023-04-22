@@ -47,6 +47,7 @@
     <Compile Include="clsIncripciones.cs" />
     <Compile Include="clsNivelEstudio.cs" />
     <Compile Include="clsProgramas.cs" />
+    <Compile Include="clsUpdateCandidatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

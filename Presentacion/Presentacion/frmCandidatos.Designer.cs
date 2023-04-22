@@ -59,12 +59,14 @@
             this.ptbNewUser = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptbUpdate = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbConsultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbNewUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbUpdate)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -126,7 +128,6 @@
             this.tbxID.Size = new System.Drawing.Size(392, 27);
             this.tbxID.TabIndex = 1;
             this.toolTip1.SetToolTip(this.tbxID, "Ingrese su documento, ejemplo: \"1002235233\"");
-            
             // 
             // label6
             // 
@@ -357,12 +358,24 @@
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
+            // ptbUpdate
+            // 
+            this.ptbUpdate.Image = ((System.Drawing.Image)(resources.GetObject("ptbUpdate.Image")));
+            this.ptbUpdate.Location = new System.Drawing.Point(317, 396);
+            this.ptbUpdate.Name = "ptbUpdate";
+            this.ptbUpdate.Size = new System.Drawing.Size(64, 64);
+            this.ptbUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbUpdate.TabIndex = 28;
+            this.ptbUpdate.TabStop = false;
+            this.ptbUpdate.Click += new System.EventHandler(this.ptbUpdate_Click);
+            // 
             // frmCandidatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1141, 545);
+            this.Controls.Add(this.ptbUpdate);
             this.Controls.Add(this.ptbNewUser);
             this.Controls.Add(this.pbxGuardar);
             this.Controls.Add(this.ptbConsultar);
@@ -399,6 +412,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxGuardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbNewUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbUpdate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,6 +449,7 @@
         private System.Windows.Forms.PictureBox ptbNewUser;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptbUpdate;
     }
 }
 
