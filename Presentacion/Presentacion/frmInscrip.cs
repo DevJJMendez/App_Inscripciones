@@ -1,13 +1,4 @@
 ﻿using Negocio;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Text;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion
@@ -20,7 +11,7 @@ namespace Presentacion
             fntCargarProgramas();
             
         }
-//------Función para cargar los comboBox----------------------------------
+//------Función para cargar los comboBox-----------------------------------------------------------------------------
         private void fntCargarProgramas()
         {
             clsProgramas objdtProgramas = new clsProgramas();
@@ -29,21 +20,21 @@ namespace Presentacion
             cbxProgramas.DisplayMember = "Nombre";
             cbxProgramas.DataSource = objdtProgramas.getdtProgramas();
         }
-//------Función consultar, Capa negocio-------------------------------------------------------------------------------------------------------------------------------------------
+//------Función consultar, Capa negocio-------------------------------------------------------------------------------
         private void fntConsultaI(string Id)
         {
             clsConsultarCandidato objConsultarI = new clsConsultarCandidato();
             objConsultarI.fntConsultar(Id);
-            tbxNombres.Text = objConsultarI.getPNombre();
+            tbxNombres.Text = objConsultarI.getPNombre() + " " + objConsultarI.getPApellido();
             tbxCorreo.Text = objConsultarI.getCorreo();
             tbxDireccion.Text = objConsultarI.getDireccion();
             tbxContacto.Text = objConsultarI.getContacto();
             pbxImagen.Image = objConsultarI.getBmp();
         }
-//------Instanciación de la función consultar-------------------------------------------------------------------------------------------------------------------------------------
-        private void tbxID_KeyPress(object sender, KeyPressEventArgs e)
+//------llamado de la función consultar---------------------------------------------------------------------------------
+        private void tbxID_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            if (e.KeyCode == Keys.Enter)
             {
                 fntConsultaI(tbxID.Text);
             }

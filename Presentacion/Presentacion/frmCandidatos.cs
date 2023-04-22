@@ -38,27 +38,6 @@ namespace Presentacion
 /*------Creación de la función para cargar los comboBox---------------------------------------------------------------------------------------------------------------------------
  -------Instacia de la clase y creación del objeto para obtener la función--------------------------------------------------------------------------------------------------------
 */
-        private void fntClean()
-        {
-            tbxID.Clear();
-                tbxPnombre.Clear();
-                    tbxSnombre.Clear();
-                        tbxPapellido.Clear();
-                            tbxSapellido.Clear();
-                                tbxAcudientes.Clear();
-                                    tbxContacto.Clear();
-                                        tbxCorreo.Clear();
-                                            tbxDireccion.Clear();
-                                                tbxEdad.Clear();
-                                                    ptbUser.Image = Image.FromFile(rutaDirectorio + "\\user.png");
-                                                        //cbxNestudio.SelectedIndex = 0;
-                                                            tbxID.Focus();
-            
-        }
-        private void ptbNewUser_Click(object sender, EventArgs e)
-        {
-            fntClean();
-        }
 
  //-----Función guardar-----------------------------------------------------------------------------------------------------------------------------------------------------------
         private void pbxGuardar_Click(object sender, EventArgs e)
@@ -164,6 +143,27 @@ namespace Presentacion
         {
             clsUpdateCandidatos objUpdateC = new clsUpdateCandidatos(tbxID.Text,tbxPnombre.Text,tbxSnombre.Text,tbxPapellido.Text,tbxSapellido.Text,tbxContacto.Text,tbxDireccion.Text,tbxCorreo.Text,tbxEdad.Text,cbxNestudio.SelectedIndex + 1, tbxAcudientes.Text);
             MessageBox.Show($"{objUpdateC.GetMsj()}");
+            fntClean();
+        }
+        private void fntClean()
+        {
+            tbxID.Clear();
+            tbxPnombre.Clear();
+            tbxSnombre.Clear();
+            tbxPapellido.Clear();
+            tbxSapellido.Clear();
+            tbxAcudientes.Clear();
+            tbxContacto.Clear();
+            tbxCorreo.Clear();
+            tbxDireccion.Clear();
+            tbxEdad.Clear();
+            ptbUser.Image = Image.FromFile(rutaDirectorio + "\\user.png");
+            //cbxNestudio.SelectedIndex = 0;
+            tbxID.Focus();
+
+        }
+        private void ptbNewUser_Click(object sender, EventArgs e)
+        {
             fntClean();
         }
     }
